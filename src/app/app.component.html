@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<router-outlet></router-outlet>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Posts</h2>
+      <p>Mis à jour : {{ lastUpdate | async | date: 'yMMMMMEEEEd' | uppercase }}</p>
+      <ul class="list-group">
+        <app-un-post *ngFor="let post of posts"
+                      [postName]="post.postName"
+                      [content]="post.content"
+                      [loveIts]="post.loveIts"
+                      [createdAt]="post.createdAt"></app-un-post>
+    </ul>
+    </div>
+  </div>
+</div>

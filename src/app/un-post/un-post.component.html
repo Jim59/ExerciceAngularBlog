@@ -1,0 +1,18 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveIts > 0,
+                'list-group-item-danger': loveIts < 0}">
+
+  <h4 class="flotte" color="black"><em>{{ createdAt | uppercase | date:'short' }}</em></h4>
+  <h2 class="topFlotte" [ngStyle]="{color: getColor()}">{{ postName }}</h2>
+  <p [ngStyle]="{color: getColor()}">{{ content }}</p>
+  <p class="flotte" color="black">love : {{ loveIts }}</p>
+
+  <button class="btn-success"
+          [disabled]="!isAuth"
+          (click)="onLoveIt()">Love it !</button>
+  <button class="btn-danger"
+          [disabled]="!isAuth"
+          (click)="onDontLoveIt()">Don't love it !</button>
+</li>
+
+
