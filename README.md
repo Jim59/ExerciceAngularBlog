@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
+# Installation et fonctionnement
+
+D'abord cloner le projet, puis 
+- Installer yarn : npm install yarn -g
+- Installer le projet: yarn install 
+- Installer bootstrap : yarn add bootstrap
+- Lancer le projet : ng serve
+Ennsuite, comme indique ci dessous, ouvrir un navigateur sur http://localhost:4200/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
